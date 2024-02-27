@@ -37,6 +37,7 @@
 		A2402A062B8DE80000E50CF9 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2402A052B8DE80000E50CF9 /* Font+.swift */; };
 		A2402A082B8DE89100E50CF9 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2402A072B8DE89100E50CF9 /* DateFormatter+.swift */; };
 		A2402A0A2B8DEBC600E50CF9 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2402A092B8DEBC600E50CF9 /* UIImage+.swift */; };
+		A2402A0C2B8DF18600E50CF9 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2402A0B2B8DF18600E50CF9 /* UITableViewCell+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		A2402A052B8DE80000E50CF9 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		A2402A072B8DE89100E50CF9 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		A2402A092B8DEBC600E50CF9 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		A2402A0B2B8DF18600E50CF9 /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				A2402A052B8DE80000E50CF9 /* Font+.swift */,
 				A2402A072B8DE89100E50CF9 /* DateFormatter+.swift */,
 				A2402A092B8DEBC600E50CF9 /* UIImage+.swift */,
+				A2402A0B2B8DF18600E50CF9 /* UITableViewCell+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				A24029CA2B8CC6FC00E50CF9 /* IconCondtition.swift in Sources */,
 				A24029F92B8D30DF00E50CF9 /* InfoViewModel.swift in Sources */,
 				A2402A0A2B8DEBC600E50CF9 /* UIImage+.swift in Sources */,
+				A2402A0C2B8DF18600E50CF9 /* UITableViewCell+.swift in Sources */,
 				A24029F32B8CE5D400E50CF9 /* HourView.swift in Sources */,
 				A2402A002B8DC68300E50CF9 /* SearchViewController.swift in Sources */,
 				A2402A082B8DE89100E50CF9 /* DateFormatter+.swift in Sources */,

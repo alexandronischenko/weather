@@ -19,7 +19,6 @@ class SearchViewController: UIViewController {
         let view = UISearchController()
         view.searchResultsUpdater = self
         view.searchBar.delegate = self
-        view.obscuresBackgroundDuringPresentation = true
         view.automaticallyShowsScopeBar = true
         view.searchBar.showsScopeBar = true
         return view
@@ -29,7 +28,7 @@ class SearchViewController: UIViewController {
         let view = UITableView()
         view.delegate = self
         view.dataSource = self
-        view.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        view.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.identifier)
         return view
     }()
 
@@ -68,11 +67,6 @@ extension SearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
         self.viewModel.searchText = text
         tableView.reloadData()
     }
-
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        guard let text = searchBar.text else { return }
-        self.viewModel.searchText = text
-    }
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
@@ -81,13 +75,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.identifier, for: indexPath) as UITableViewCell
         cell.textLabel?.text = viewModel.searchResults[indexPath.row].name
         return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        40
+        CGFloat(Constants.Offset.x3)
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
