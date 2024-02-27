@@ -1,6 +1,40 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "barcelona" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barcelona"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Барселона"
+          }
+        }
+      }
+    },
+    "berlin" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berlin"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Берлин"
+          }
+        }
+      }
+    },
     "kazan" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -8,6 +42,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kazan"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Казань"
           }
         }
       }
@@ -20,6 +60,46 @@
             "state" : "translated",
             "value" : "Krasnodar"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Краснодар"
+          }
+        }
+      }
+    },
+    "london" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "London"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лондон"
+          }
+        }
+      }
+    },
+    "minsk" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minsk"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Минск"
+          }
         }
       }
     },
@@ -30,6 +110,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moscow"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Москва"
           }
         }
       }
@@ -42,6 +128,46 @@
             "state" : "translated",
             "value" : "Nothing found"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ничего не найдено"
+          }
+        }
+      }
+    },
+    "paris" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paris"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Париж"
+          }
+        }
+      }
+    },
+    "rome" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rome"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рим"
+          }
         }
       }
     },
@@ -52,6 +178,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rostov-on-Don"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ростов на Дону"
           }
         }
       }
@@ -64,6 +196,12 @@
             "state" : "translated",
             "value" : "Saint Petersburg"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Санкт-Петербург"
+          }
         }
       }
     },
@@ -74,6 +212,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Search"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск"
           }
         }
       }
@@ -86,6 +230,12 @@
             "state" : "translated",
             "value" : "Hourly forecast"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почасовой прогноз"
+          }
         }
       }
     },
@@ -96,6 +246,29 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Weekly forecast"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прогноз на неделю"
+          }
+        }
+      }
+    },
+    "warsaw" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warsaw"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Варшава"
           }
         }
       }

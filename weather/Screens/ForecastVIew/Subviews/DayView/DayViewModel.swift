@@ -18,10 +18,10 @@ class DayViewModel: Identifiable, ObservableObject {
 
     lazy var formattedDate: String = {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        guard let date = dateFormatter.date(from: date) else { return "Error formatting" }
+        dateFormatter.dateFormat = DateFormatter.common
+        guard let date = dateFormatter.date(from: date) else { return DateFormatter.errorFormatting }
         dateFormatter.locale = .current
-        dateFormatter.dateFormat = "E"
+        dateFormatter.dateFormat = DateFormatter.weekDay
         let dayInWeek = dateFormatter.string(from: date)
 
         return dayInWeek

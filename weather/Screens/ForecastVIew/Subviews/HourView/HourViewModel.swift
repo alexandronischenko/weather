@@ -19,11 +19,11 @@ class HourViewModel: Identifiable, ObservableObject {
     lazy var formattedTime: String = {
         let formatter = DateFormatter()
 
-        formatter.dateFormat = "HH"
+        formatter.dateFormat = DateFormatter.hour
         formatter.locale = .current
-        guard let date = formatter.date(from: time) else { return "nil" }
+        guard let date = formatter.date(from: time) else { return DateFormatter.errorFormatting }
 
-        formatter.dateFormat = "HH:mm"
+        formatter.dateFormat = DateFormatter.hourMin
         return formatter.string(from: date)
     }()
 

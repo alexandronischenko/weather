@@ -10,7 +10,7 @@ import Combine
 import UIKit
 
 class SearchViewModel {
-    @Published var cities = Constants.cities
+    @Published var cities = Constants.Data.cities
     @Published var city: City?
     var searchText: String = ""
 

@@ -53,13 +53,13 @@ final class HourView: UIView {
             make.trailing.equalToSuperview()
         }
         image.snp.makeConstraints { make in
-            make.top.equalTo(labelTime.snp.bottom).offset(4)
+            make.top.equalTo(labelTime.snp.bottom).offset(Constants.Offset.x4 / Constants.Offset.x)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(32)
+            make.height.equalTo(Constants.Offset.x)
         }
         labelTemp.snp.makeConstraints { make in
-            make.top.equalTo(image.snp.bottom).offset(4)
+            make.top.equalTo(image.snp.bottom).offset(Constants.Offset.x4 / Constants.Offset.x)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
         }

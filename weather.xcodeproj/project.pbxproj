@@ -34,6 +34,9 @@
 		A24029FE2B8D497A00E50CF9 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24029FD2B8D497A00E50CF9 /* UIStackView+.swift */; };
 		A2402A002B8DC68300E50CF9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24029FF2B8DC68300E50CF9 /* SearchViewController.swift */; };
 		A2402A022B8DC7BC00E50CF9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2402A012B8DC7BC00E50CF9 /* SearchViewModel.swift */; };
+		A2402A062B8DE80000E50CF9 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2402A052B8DE80000E50CF9 /* Font+.swift */; };
+		A2402A082B8DE89100E50CF9 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2402A072B8DE89100E50CF9 /* DateFormatter+.swift */; };
+		A2402A0A2B8DEBC600E50CF9 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2402A092B8DEBC600E50CF9 /* UIImage+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,9 @@
 		A24029FD2B8D497A00E50CF9 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		A24029FF2B8DC68300E50CF9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A2402A012B8DC7BC00E50CF9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		A2402A052B8DE80000E50CF9 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		A2402A072B8DE89100E50CF9 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
+		A2402A092B8DEBC600E50CF9 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,9 @@
 			children = (
 				A24029CC2B8CC76C00E50CF9 /* String+.swift */,
 				A24029FD2B8D497A00E50CF9 /* UIStackView+.swift */,
+				A2402A052B8DE80000E50CF9 /* Font+.swift */,
+				A2402A072B8DE89100E50CF9 /* DateFormatter+.swift */,
+				A2402A092B8DEBC600E50CF9 /* UIImage+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,9 +338,12 @@
 				A24029A42B8CC57500E50CF9 /* SceneDelegate.swift in Sources */,
 				A24029CA2B8CC6FC00E50CF9 /* IconCondtition.swift in Sources */,
 				A24029F92B8D30DF00E50CF9 /* InfoViewModel.swift in Sources */,
+				A2402A0A2B8DEBC600E50CF9 /* UIImage+.swift in Sources */,
 				A24029F32B8CE5D400E50CF9 /* HourView.swift in Sources */,
 				A2402A002B8DC68300E50CF9 /* SearchViewController.swift in Sources */,
+				A2402A082B8DE89100E50CF9 /* DateFormatter+.swift in Sources */,
 				A24029C02B8CC61B00E50CF9 /* WeatherModels.swift in Sources */,
+				A2402A062B8DE80000E50CF9 /* Font+.swift in Sources */,
 				A24029F52B8CE5F900E50CF9 /* HourViewModel.swift in Sources */,
 				A24029CD2B8CC76C00E50CF9 /* String+.swift in Sources */,
 				A24029D02B8CC78E00E50CF9 /* LocationManager.swift in Sources */,

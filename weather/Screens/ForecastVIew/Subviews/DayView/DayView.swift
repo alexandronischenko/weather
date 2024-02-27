@@ -15,7 +15,7 @@ final class DayView: UIView {
     private lazy var date: UILabel = {
         let label = UILabel()
         label.text = viewModel.formattedDate
-        label.font = .systemFont(ofSize: 16, weight: .semibold)
+        label.font = .common()
         return label
     }()
 
@@ -64,7 +64,7 @@ final class DayView: UIView {
 
         let stack = UIStackView()
         stack.axis = .horizontal
-        stack.spacing = 16
+        stack.spacing = CGFloat(Constants.Offset.x)
         stack.distribution = .fillEqually
 
         stack.addArrangedSubview(date)

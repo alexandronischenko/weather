@@ -22,6 +22,14 @@ enum Localizable: String {
     case saintPetersburg = "saint_petersburg"
     case krasnodar = "krasnodar"
     case rostov = "rostov_on_don"
+    case london = "london"
+    case paris = "paris"
+    case barcelona = "barcelona"
+    case berlin = "berlin"
+    case warsaw = "warsaw"
+    case minsk = "minsk"
+    case rome = "rome"
+
     case nothingFound = "nothing_found"
 }
 

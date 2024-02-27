@@ -22,10 +22,7 @@ final class ForecastViewModel: ObservableObject {
         self.itemsByTheDay = days
         self.itemsByTheHour = hours
         self.info = info
-        self.city = City(
-            id: 0,
-            name: Localizable.moscow.localized,
-            coordinate: Coordinate(lat: 55.75, lon: 37.62))
+        self.city = Constants.Data.cities[.zero]
     }
 
     public init(city: City) {

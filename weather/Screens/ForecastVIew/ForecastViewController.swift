@@ -25,7 +25,7 @@ class ForecastViewController: UIViewController {
     private lazy var cityLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 30, weight: .medium)
+        label.font = .cityLabel()
         label.textAlignment = .center
         return label
     }()
@@ -33,7 +33,7 @@ class ForecastViewController: UIViewController {
     private lazy var temperatureLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 50, weight: .semibold)
+        label.font = .temperatureLabel()
         label.textAlignment = .center
         return label
     }()
@@ -49,20 +49,20 @@ class ForecastViewController: UIViewController {
     private lazy var dayLabel: UILabel = {
         let view = UILabel()
         view.text = Localizable.hourlyForecast.localized
-        view.font = .systemFont(ofSize: 24, weight: .medium)
+        view.font = .paragraphLabel()
         return view
     }()
 
     private lazy var dayScrollView: UIScrollView = {
         let view = UIScrollView()
-        view.layer.cornerRadius = 8
+        view.layer.cornerRadius = CGFloat(Constants.Offset.x05)
         return view
     }()
 
     private lazy var dayStackView: UIStackView = {
         let view = UIStackView()
         view.axis = .horizontal
-        view.spacing = 16
+        view.spacing = CGFloat(Constants.Offset.x)
         return view
     }()
 
@@ -70,14 +70,14 @@ class ForecastViewController: UIViewController {
     private lazy var weekLabel: UILabel = {
         let view = UILabel()
         view.text = Localizable.weeklyForecast.localized
-        view.font = .systemFont(ofSize: 24, weight: .medium)
+        view.font = .paragraphLabel()
         return view
     }()
 
     private lazy var weekStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 16
+        stackView.spacing = CGFloat(Constants.Offset.x)
         return stackView
     }()
 
@@ -147,13 +147,13 @@ class ForecastViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
         temperatureLabel.snp.makeConstraints { make in
-            make.top.equalTo(cityLabel.snp.bottom).offset(16)
+            make.top.equalTo(cityLabel.snp.bottom).offset(Constants.Offset.x)
             make.centerX.equalToSuperview()
         }
         conditionImage.snp.makeConstraints { make in
-            make.top.equalTo(temperatureLabel.snp.bottom).offset(16)
+            make.top.equalTo(temperatureLabel.snp.bottom).offset(Constants.Offset.x)
             make.centerX.equalToSuperview()
-            make.height.width.equalTo(100)
+            make.height.width.equalTo(Constants.Offset.x6)
         }
 
         // MARK: DAYVIEW
@@ -162,22 +162,22 @@ class ForecastViewController: UIViewController {
         dayScrollView.addSubview(dayStackView)
 
         dayLabel.snp.makeConstraints { make in
-            make.top.equalTo(conditionImage.snp.bottom).offset(16)
-            make.leading.equalToSuperview().inset(16)
+            make.top.equalTo(conditionImage.snp.bottom).offset(Constants.Offset.x)
+            make.leading.equalToSuperview().inset(Constants.Offset.x)
             make.trailing.equalToSuperview()
         }
         dayScrollView.snp.makeConstraints { make in
-            make.top.equalTo(dayLabel.snp.bottom).offset(8)
-            make.leading.equalTo(mainScrollView.snp.leading).offset(16)
-            make.trailing.equalTo(mainScrollView.snp.trailing).inset(16)
+            make.top.equalTo(dayLabel.snp.bottom).offset(Constants.Offset.x05)
+            make.leading.equalTo(mainScrollView.snp.leading).offset(Constants.Offset.x)
+            make.trailing.equalTo(mainScrollView.snp.trailing).inset(Constants.Offset.x)
             make.centerX.equalToSuperview()
-            make.height.equalTo(100)
+            make.height.equalTo(Constants.Offset.x6)
         }
         dayStackView.snp.makeConstraints { make in
-            make.top.equalTo(dayScrollView.snp.top).offset(8)
-            make.leading.equalTo(dayScrollView.snp.leading).offset(8)
-            make.trailing.equalTo(dayScrollView.snp.trailing).inset(8)
-            make.bottom.equalTo(dayScrollView.snp.bottom).inset(8)
+            make.top.equalTo(dayScrollView.snp.top).offset(Constants.Offset.x05)
+            make.leading.equalTo(dayScrollView.snp.leading).offset(Constants.Offset.x05)
+            make.trailing.equalTo(dayScrollView.snp.trailing).inset(Constants.Offset.x05)
+            make.bottom.equalTo(dayScrollView.snp.bottom).inset(Constants.Offset.x05)
         }
 
         // MARK: WEEKVIEW
@@ -186,22 +186,22 @@ class ForecastViewController: UIViewController {
         mainScrollView.addSubview(weekStackView)
 
         weekLabel.snp.makeConstraints { make in
-            make.top.equalTo(dayScrollView.snp.bottom).offset(16)
-            make.leading.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().inset(16)
+            make.top.equalTo(dayScrollView.snp.bottom).offset(Constants.Offset.x)
+            make.leading.equalToSuperview().offset(Constants.Offset.x)
+            make.trailing.equalToSuperview().inset(Constants.Offset.x)
         }
         weekStackView.snp.makeConstraints { make in
-            make.top.equalTo(weekLabel.snp.bottom).offset(16)
-            make.leading.equalTo(mainScrollView.snp.leading).offset(32)
-            make.trailing.equalTo(mainScrollView.snp.trailing).inset(32)
-            make.bottom.equalTo(mainScrollView.snp.bottom).inset(8)
+            make.top.equalTo(weekLabel.snp.bottom).offset(Constants.Offset.x)
+            make.leading.equalTo(mainScrollView.snp.leading).offset(Constants.Offset.x)
+            make.trailing.equalTo(mainScrollView.snp.trailing).inset(Constants.Offset.x)
+            make.bottom.equalTo(mainScrollView.snp.bottom).inset(Constants.Offset.x05)
         }
     }
 
     func configureNavigationBar() {
-        let button = UIBarButtonItem(image: UIImage(systemName: "location.fill"), style: .done, target: self, action: #selector(getLocationForecast))
+        let button = UIBarButtonItem(image: UIImage.location(), style: .done, target: self, action: #selector(getLocationForecast))
         navigationItem.leftBarButtonItem = button
-        let buttonRight = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .done, target: self, action: #selector(searchButtonTapped))
+        let buttonRight = UIBarButtonItem(image: UIImage.scope(), style: .done, target: self, action: #selector(searchButtonTapped))
         navigationItem.rightBarButtonItem = buttonRight
     }
 
