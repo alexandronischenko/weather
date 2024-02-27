@@ -16,12 +16,7 @@ final class ForecastViewModel: ObservableObject {
 
     private var anyCancelable: Set<AnyCancellable> = []
 
-    public init(info: [InfoViewModel],
-                days: [DayViewModel],
-                hours: [HourViewModel]) {
-        self.itemsByTheDay = days
-        self.itemsByTheHour = hours
-        self.info = info
+    public init() {
         self.city = Constants.Data.cities[.zero]
     }
 

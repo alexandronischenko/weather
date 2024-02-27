@@ -15,6 +15,7 @@ final class DayView: UIView {
     private lazy var date: UILabel = {
         let label = UILabel()
         label.text = viewModel.formattedDate
+        label.textAlignment = .center
         label.font = .common()
         return label
     }()
@@ -35,12 +36,14 @@ final class DayView: UIView {
 
     private lazy var temperatureNight: UILabel = {
         let view = UILabel()
+        view.textAlignment = .center
         view.text = "\(viewModel.night)"
         return view
     }()
 
     private lazy var temperatureDay: UILabel = {
         let view = UILabel()
+        view.textAlignment = .center
         view.text = "\(viewModel.day)"
         return view
     }()

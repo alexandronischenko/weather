@@ -20,10 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            let viewModel = ForecastViewModel(info: [], days: [], hours: [])
-            let hours: [HourViewModel] = []
-            let days: [DayViewModel] = []
-            let newVC = ForecastViewController(viewModel: viewModel, hours: hours, days: days)
+            let viewModel = ForecastViewModel()
+            let newVC = ForecastViewController(viewModel: viewModel)
             window.rootViewController = UINavigationController(rootViewController: newVC)
             self.window = window
             window.makeKeyAndVisible()

@@ -79,10 +79,8 @@ class ForecastViewController: UIViewController {
         return stackView
     }()
 
-    init(viewModel: ForecastViewModel, hours: [HourViewModel], days: [DayViewModel]) {
+    init(viewModel: ForecastViewModel) {
         self.viewModel = viewModel
-        self.hourViewModels = hours
-        self.dayViewModels = days
         super.init(nibName: nil, bundle: nil)
     }
     
