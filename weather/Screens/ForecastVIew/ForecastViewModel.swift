@@ -33,27 +33,23 @@ final class ForecastViewModel: ObservableObject {
     }
 
     func fetchData() {
-        WeatherRepository.shared.getForecast(in: self.city) { result in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case.success(let weather):
-                self.clearData()
-                self.setData(weather: weather)
-            }
+        WeatherRepository.shared.getForecast(in: self.city).sink { completion in
+            print(completion)
+        } receiveValue: { [weak self] weather in
+            self?.clearData()
+            self?.setData(weather: weather)
         }
+        .store(in: &anyCancelable)
     }
 
     func fetchDataFromLocation() {
-        WeatherRepository.shared.getForecast { result in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case.success(let weather):
-                self.clearData()
-                self.setData(weather: weather)
-            }
+        WeatherRepository.shared.getForecast().sink { completion in
+            print(completion)
+        } receiveValue: { [weak self] weather in
+            self?.clearData()
+            self?.setData(weather: weather)
         }
+        .store(in: &anyCancelable)
     }
 
     func setData(weather: Weather) {

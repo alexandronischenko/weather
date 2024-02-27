@@ -24,7 +24,6 @@ class ForecastViewController: UIViewController {
     // MARK: INFOVIEW
     private lazy var cityLabel: UILabel = {
         let label = UILabel()
-        label.text = "town"
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 30, weight: .medium)
         label.textAlignment = .center
@@ -33,7 +32,6 @@ class ForecastViewController: UIViewController {
 
     private lazy var temperatureLabel: UILabel = {
         let label = UILabel()
-        label.text = "30"
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 50, weight: .semibold)
         label.textAlignment = .center
@@ -130,13 +128,7 @@ class ForecastViewController: UIViewController {
     }
 
     func configureView() {
-
-
-        let button = UIBarButtonItem(image: UIImage(systemName: "location.fill"), style: .done, target: self, action: #selector(getLocationForecast))
-        navigationItem.leftBarButtonItem = button
-        let buttonRight = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .done, target: self, action: #selector(searchButtonTapped))
-        navigationItem.rightBarButtonItem = buttonRight
-
+        configureNavigationBar()
         view.backgroundColor = .white
         view.addSubview(mainScrollView)
 
@@ -161,11 +153,10 @@ class ForecastViewController: UIViewController {
         conditionImage.snp.makeConstraints { make in
             make.top.equalTo(temperatureLabel.snp.bottom).offset(16)
             make.centerX.equalToSuperview()
-            make.height.width.equalTo(128)
+            make.height.width.equalTo(100)
         }
 
         // MARK: DAYVIEW
-
         mainScrollView.addSubview(dayLabel)
         mainScrollView.addSubview(dayScrollView)
         dayScrollView.addSubview(dayStackView)
@@ -205,6 +196,13 @@ class ForecastViewController: UIViewController {
             make.trailing.equalTo(mainScrollView.snp.trailing).inset(32)
             make.bottom.equalTo(mainScrollView.snp.bottom).inset(8)
         }
+    }
+
+    func configureNavigationBar() {
+        let button = UIBarButtonItem(image: UIImage(systemName: "location.fill"), style: .done, target: self, action: #selector(getLocationForecast))
+        navigationItem.leftBarButtonItem = button
+        let buttonRight = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .done, target: self, action: #selector(searchButtonTapped))
+        navigationItem.rightBarButtonItem = buttonRight
     }
 
     @objc func getLocationForecast() {

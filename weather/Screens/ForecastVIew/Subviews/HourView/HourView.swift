@@ -14,6 +14,7 @@ final class HourView: UIView {
     private lazy var labelTime: UILabel = {
         let view = UILabel()
         view.text = item.formattedTime
+        view.textAlignment = .center
         return view
     }()
 
@@ -27,6 +28,7 @@ final class HourView: UIView {
     private lazy var labelTemp: UILabel = {
         let view = UILabel()
         view.text = item.formattedTemp
+        view.textAlignment = .center
         return view
     }()
 
