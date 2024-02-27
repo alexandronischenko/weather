@@ -31,7 +31,6 @@ final class ForecastViewModel: ObservableObject {
 
     func fetchData() {
         WeatherRepository.shared.getForecast(in: self.city).sink { completion in
-            print(completion)
         } receiveValue: { [weak self] weather in
             self?.clearData()
             self?.setData(weather: weather)
@@ -41,7 +40,6 @@ final class ForecastViewModel: ObservableObject {
 
     func fetchDataFromLocation() {
         WeatherRepository.shared.getForecast().sink { completion in
-            print(completion)
         } receiveValue: { [weak self] weather in
             self?.clearData()
             self?.setData(weather: weather)

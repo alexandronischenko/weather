@@ -26,13 +26,11 @@ class ForecastViewController: UIViewController {
         let label = UILabel()
         label.textAlignment = .center
         label.font = .cityLabel()
-        label.textAlignment = .center
         return label
     }()
 
     private lazy var temperatureLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .center
         label.font = .temperatureLabel()
         label.textAlignment = .center
         return label
@@ -181,7 +179,6 @@ class ForecastViewController: UIViewController {
         }
 
         // MARK: WEEKVIEW
-
         mainScrollView.addSubview(weekLabel)
         mainScrollView.addSubview(weekStackView)
 
